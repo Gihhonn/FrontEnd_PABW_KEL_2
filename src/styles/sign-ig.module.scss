@@ -1,0 +1,378 @@
+.container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    max-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 27px;
+    left: 49px;
+    width: 100px;
+}
+
+//   .image {
+//     top: 27px;
+//     left: 49px;
+//     width: 100px;
+//     position: absolute;
+//     object-fit: cover;
+//     cursor: pointer;
+//   }
+  .container1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .container2 {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container3 {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text {
+    font-size: 28px;
+    align-self: center;
+    font-style: normal;
+    margin-top: var(--dl-space-space-unit);
+    font-family: Montserrat;
+    font-weight: 700;
+    padding-top: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-halfunit);
+  }
+  .text1 {
+    color: #7a7c85;
+    align-self: center;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .form {
+    gap: 2rem;
+    width: 50%;
+    height: auto;
+    display: flex;
+    max-width: 50%;
+    align-self: center;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+  }
+  .textinput {
+    height: 60px;
+    border-radius: 7px;
+    color: #000000;
+    cursor: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .submitinput {
+    height: 60px;
+    border-radius: 7px;
+    color: white;
+    cursor: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #3E5CB8;
+    width: 100%;
+  }
+
+.submitinput:hover {
+    cursor: pointer;
+
+}
+
+  .button {
+    color: rgb(255, 255, 255);
+    width: 50%;
+    height: 60px;
+    align-self: center;
+    font-style: normal;
+    margin-top: var(--dl-space-space-unit);
+    font-family: Montserrat;
+    font-weight: 600;
+    border-radius: 7px;
+    margin-bottom: var(--dl-space-space-unit);
+    background-color: rgb(62, 92, 184);
+  }
+  .text2 {
+    color: rgb(122, 124, 133);
+    align-self: center;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 600;
+  }
+  .container4 {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    border-radius: 7px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .errorText {
+    color: red;
+    font-family: Montserrat;
+    font-weight: 500;
+  }
+
+  .container5 {
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .image1 {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+  .text3 {
+    align-self: center;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 600;
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+  }
+  .container6 {
+    display: flex;
+    align-self: center;
+    margin-top: var(--dl-space-space-twounits);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-twounits);
+    flex-direction: row;
+  }
+  .text4 {
+    color: rgb(122, 124, 133);
+    align-self: center;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 500;
+  }
+  .text5 {
+    color: rgb(72, 147, 216);
+    align-self: center;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .container7 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .image2 {
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    object-fit: cover;
+  }
+  @media(max-width: 1600px) {
+    .container {
+      overflow: auto;
+      max-height: 100vh;
+    }
+    .container1 {
+      height: 100vh;
+    }
+    .container2 {
+      position: relative;
+    }
+    .container3 {
+      margin: auto;
+    }
+    .text {
+      margin-top: var(--dl-space-space-unit);
+      margin-bottom: var(--dl-space-space-unit);
+    }
+    .textinput {
+      height: 50px;
+    }
+    .textinput1 {
+      height: 50px;
+    }
+  }
+  @media(max-width: 1200px) {
+    .container {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      max-height: 100vh;
+    }
+    .image {
+      width: 82px;
+      height: 47px;
+    }
+    .text {
+      font-size: 24px;
+      margin-top: var(--dl-space-space-unit);
+      margin-bottom: var(--dl-space-space-unit);
+    }
+    .text1 {
+      font-size: 15px;
+    }
+    .textinput {
+      height: 45px;
+    }
+    .textinput1 {
+      height: 45px;
+    }
+    .image1 {
+      width: 25px;
+      height: 25px;
+    }
+    .text3 {
+      font-size: 14px;
+    }
+    .text4 {
+      font-size: 14px;
+    }
+    .text5 {
+      font-size: 14px;
+    }
+  }
+  @media(max-width: 991px) {
+    .container2 {
+      width: 100%;
+      background-size: cover;
+      background-image: url("/playground_assets/wp9247941-4k-indonesia-wallpapers-1500h.jpg");
+    }
+    .container3 {
+      width: 710px;
+      border-color: rgba(255, 255, 255, 0.65);
+      border-width: 2px;
+      border-radius: var(--dl-radius-radius-radius4);
+      background-color: rgba(255, 255, 255, 0.63);
+    }
+    .text {
+      color: #000000;
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+    .text1 {
+      color: #5a5858;
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+    .textinput {
+      height: 45px;
+    }
+    .textinput1 {
+      height: 45px;
+    }
+    .button {
+      color: rgb(255, 255, 255);
+      height: 45px;
+      font-size: 14px;
+      font-style: normal;
+      font-family: Montserrat;
+      font-weight: 600;
+      background-color: rgb(62, 92, 184);
+    }
+    .text2 {
+      color: #000000;
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+    .container4 {
+      height: 45px;
+    }
+    .text4 {
+      color: #000000;
+      font-style: normal;
+      font-weight: 700;
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+    .text5 {
+      color: #1f8cff;
+      text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+    .container7 {
+      display: none;
+    }
+  }
+  @media(max-width: 767px) {
+    .container2 {
+      width: 100%;
+      background-size: cover;
+      background-image: url("/playground_assets/wp9247941-4k-indonesia-wallpapers-1500h.jpg");
+    }
+    .container3 {
+      width: 80%;
+      margin: auto;
+      background-image: linear-gradient(270deg, rgba(189, 195, 199, 0.19) 100.00%,rgba(189, 195, 199, 0.4) 23.00%);
+    }
+    .text {
+      color: #ffffff;
+    }
+    .text1 {
+      color: #eaeaeb;
+    }
+    .textinput {
+      height: auto;
+    }
+    .textinput1 {
+      height: auto;
+    }
+    .container7 {
+      display: none;
+    }
+  }
+  @media(max-width: 479px) {
+    .container3 {
+      width: 90%;
+      background-image: linear-gradient(270deg, rgba(189, 195, 199, 0.19) 100.00%,rgba(189, 195, 199, 0.4) 23.00%);
+    }
+    .text {
+      color: #000000;
+      font-size: 22px;
+    }
+    .text1 {
+      color: #5d5d60;
+      font-size: 13px;
+    }
+    .container5 {
+      margin: auto;
+      padding: auto;
+    }
+    .text3 {
+      font-size: 12px;
+    }
+  }
+  
