@@ -1,14 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
-
-import InputDate from '@/components/input-date'
-import InputGeneral from '@/components/input-general'
-import InputBooker from '@/components/input-booker'
-import InputSeat from '@/components/input-seat'
-import NavigationLinks from '@/components/navigation-links'
-import NavigationLinks1 from '@/components/navigation-links1'
 
 
 export default function Home() {
@@ -31,19 +23,6 @@ export default function Home() {
             
           />
           <div className="home-nav"></div>
-          <div className="home-btn-group">
-            
-            <button className="home-login button">
-            <Link
-            href='/sign-in-page'
-            >Sign in</Link>
-            </button>
-            <button className="home-register button">
-            <Link
-            href='/sign-up-page'
-            >Sign up</Link>
-            </button>
-          </div>
           <div data-role="BurgerMenu" className="home-burger-menu">
             <svg viewBox="0 0 1024 1024" className="home-icon">
               <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
@@ -63,7 +42,6 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <NavigationLinks rootClassName="navigation-links-root-class-name8"></NavigationLinks>
             </div>
           </div>
         </header>
@@ -79,19 +57,87 @@ export default function Home() {
         <div className='booker'>
           <h2 className='booker-information'>Booker Information</h2>
           <form>
-            <InputBooker
-            text='Title'
-            label='Email'
-            label1='Name'
-            label2='Phone'
-            ></InputBooker>
-
+          <div className='input-booker-container'>
+            <div className="input-booker-container1">
+                <span className="input-booker-text"></span>
+                <label>Title</label>
+                <select className="input-booker-select selectinput">
+                  <option value="Business" >Booker Title</option>
+                  <option value="Economy">Tuan</option>
+                  <option value="Business">Nyonya</option>
+                  <option value="Business">Nona</option>
+                </select>
+            </div>
+          </div>
+          <div className='Label'>
+            <label>Name</label>
+            <input 
+            type='text' 
+            name='name' 
+            placeholder='Enter Your Name'/>
+          </div>
+          <div className='Label'>
+            <label>Email</label>
+            <input 
+            type='text' 
+            name='name' 
+            placeholder='Enter Your Email'/>
+          </div>
+          <div className='Label'>
+            <label>Phone</label>
+            <input 
+            type='text' 
+            name='name' 
+            placeholder='Enter Your Phone'/>
+          </div>
           </form>
         </div>
         <div className='booker1'>
           <h2 className='booker-information1'>1 - Dewasa #1 </h2>
           <form>
-          
+          <div className='input-booker-container'>
+            <div className="input-booker-container1">
+                <span className="input-booker-text"></span>
+                <label>Title</label>
+                <select className="input-booker-select selectinput">
+                  <option value="Business" >Booker Title</option>
+                  <option value="Economy">Tuan</option>
+                  <option value="Business">Nyonya</option>
+                  <option value="Business">Nona</option>
+                </select>
+            </div>
+          </div>
+          <div className='Label'>
+            <label>Name</label>
+            <input 
+            type='text' 
+            name='name' 
+            placeholder='Enter Your Name'/>
+          </div>
+          <div className='Label'>
+            <label>Citizenship</label>
+            <input 
+            type='text' 
+            name='name' 
+            placeholder='Enter Your Citizenship'/>
+          </div>
+          </form>
+        </div>
+        <div className='booker2'>
+          <h2 className='booker-information2'>Payment</h2>
+          <form>
+          <div className='input-booker-container'>
+            <div className="input-booker-container1">
+                <span className="input-booker-text"></span>
+                <label>Payment Method</label>
+                <select className="input-booker-select selectinput">
+                  <option value="Business" >select Payment Method</option>
+                  <option value="Economy">DANA</option>
+                  <option value="Business">BRI</option>
+                  <option value="Business">BNI</option>
+                </select>
+            </div>
+          </div>
           </form>
         </div>
       </div>
@@ -109,12 +155,57 @@ export default function Home() {
           .booker-information {
             margin-left: 90px;
             margin-top: 30px;
-            font-size: ;
+            font-size: 25px;
           }
           .booker-information1 {
             margin-left: 90px;
             margin-top: 30px;
-            font-size: ;
+            font-size: 25px;
+          }
+          .booker-information2 {
+            margin-left: 90px;
+            margin-top: 30px;
+            font-size: 25px;
+          }
+          .input-booker-container {
+            flex: 0 0 auto;
+            height: 100px;
+            display: flex;
+            margin-top: 50px;
+            margin-left: 40px;
+            padding-left: 40%;
+            padding-right: 40%;
+          }
+          .input-booker-container1 {
+            gap: var(--dl-space-space-halfunit);
+            display: flex;
+            align-self: ;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+          .input-booker-text {
+            color: #5d5f67;
+            font-size: 1.1rem;
+            font-family: Montserrat;
+          }
+          .input-booker-select selectinput {
+            font-family: Montserrat;
+          }
+          .Label {
+            gap: var(--dl-space-space-halfunit);
+            display: flex;
+            align-self: ;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 0 0 auto;
+            height: 100px;
+            display: flex;
+            margin-top: 10px;
+            margin-left: 40px;
+            padding-left: 40%;
+            padding-right: 40%;
+            font-size: 1.1rem;
+            font-family: Montserrat;
           }
           .home-header {
             width: 100%;
@@ -140,43 +231,6 @@ export default function Home() {
             align-items: center;
             flex-direction: row;
             justify-content: space-between;
-          }
-          .home-login {
-            color: #ffffff;
-            width: 108px;
-            height: 44px;
-            font-style: normal;
-            transition: 0.3s;
-            font-family: Montserrat;
-            font-weight: 600;
-            border-color: #ffffff;
-            border-width: 1px;
-            margin-right: var(--dl-space-space-twounits);
-            border-radius: 13px;
-            background-color: rgba(255, 255, 255, 0);
-          }
-          .home-login:hover {
-            cursor: pointer;
-            background: rgba(62, 92, 184, 0.44);
-            border-color: rgba(62, 92, 184, 0.44);
-          }
-          .home-register {
-            color: #ffffff;
-            width: 108px;
-            height: 44px;
-            font-style: normal;
-            transition: 0.3s;
-            font-family: Montserrat;
-            font-weight: 600;
-            border-color: #ffffff;
-            border-width: 0px;
-            border-radius: 13px;
-            background-color: #3e5cb8;
-          }
-          .home-register:hover {
-            cursor: pointer;
-            background: rgba(62, 92, 184, 0.44);
-            border-color: rgba(62, 92, 184, 0.44);
           }
           .home-burger-menu {
             display: none;
@@ -298,6 +352,25 @@ export default function Home() {
           }
           .booker1 {
             top: 1300px;
+            flex: 0 0 auto;
+            left: 190px;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            z-index: 100;
+            position: absolute;
+            align-items: flex-start;
+            border-color: #a7a7a7;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 13px;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: #ffffff;
+          }
+          .booker2 {
+            top: 1800px;
             flex: 0 0 auto;
             left: 190px;
             width: 80%;

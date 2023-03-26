@@ -16,26 +16,26 @@ const InputBooker = (props) => {
             </select>
         </div>
       </div>
-      <div className='Email'>
+      <div className='Label'>
+        <label>{props.label}</label>
+        <input 
+        type='text' 
+        name='name' 
+        placeholder='Enter Your Name'/>
+      </div>
+      <div className='Label'>
         <label>{props.label}</label>
         <input 
         type='text' 
         name='name' 
         placeholder='Enter Your Email'/>
       </div>
-      <div className='Email'>
+      <div className='Label'>
         <label>{props.label}</label>
         <input 
         type='text' 
         name='name' 
-        placeholder='Enter Your Email'/>
-      </div>
-      <div className='Email'>
-        <label>{props.label}</label>
-        <input 
-        type='text' 
-        name='name' 
-        placeholder='Enter Your Email'/>
+        placeholder='Enter Your Phone'/>
       </div>
 
       <style jsx>
@@ -52,7 +52,7 @@ const InputBooker = (props) => {
           .input-booker-container1 {
             gap: var(--dl-space-space-halfunit);
             display: flex;
-            align-self: ;
+            align-self: ;gi
             align-items: flex-start;
             flex-direction: column;
           }
@@ -64,7 +64,7 @@ const InputBooker = (props) => {
           .input-booker-select selectinput {
             font-family: Montserrat;
           }
-          .Email {
+          .Label {
             gap: var(--dl-space-space-halfunit);
             display: flex;
             align-self: ;
@@ -90,14 +90,12 @@ InputBooker.defaultProps = {
   rootClassName: '',
   textinput_placeholder: 'Where are you from....',
   text: 'Departure City',
-  label: 'Label',
 }
 
 InputBooker.propTypes = {
   rootClassName: PropTypes.string,
   textinput_placeholder: PropTypes.string,
   text: PropTypes.string,
-  label: PropTypes.string,
 }
 
 export default InputBooker
