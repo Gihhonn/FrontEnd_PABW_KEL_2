@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --dl-color-gray-500: #595959;
   --dl-color-gray-700: #999999;
@@ -59,12 +67,12 @@
 //   background-color: #ffffff !important;
 // }
 
-.layouts_container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  overflow-x: hidden;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-}
+// .layouts_container {
+//   width: 100%;
+//   display: flex;
+//   overflow: auto;
+//   overflow-x: hidden;
+//   min-height: 100vh;
+//   flex-direction: column;
+//   align-items: center;
+// }
