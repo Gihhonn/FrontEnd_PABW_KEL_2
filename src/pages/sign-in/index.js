@@ -25,20 +25,34 @@ const Index = () => {
     resolver: yupResolver(SigninSchema)
   });
 
-  const onSubmit = useCallback(async (data) => {
-    try {
-      await axios.get('https://petstore.swagger.io/v2/user/login', {
-        username: data.fullName,
-        password: data.password
-      })
-      .then((res) => {
-        console.log(res)
-        router.push('/')
-      })
-    } catch (error) {
-      console.log(error)
-    }
-  }) 
+  async function onSubmit(data) {
+    await axios.get('https://petstore.swagger.io/v2/user/login', {
+      username: data.fullName,
+      password: data.password
+    });
+
+    await new Promise(resolve => setTimeout(resolve, 3000))
+
+    const getUser = await axios.get(`https://petstore.swagger.io/v2/user/${data.fullName}`)
+    console.log(getUser.data)
+    localStorage.setItem('token', JSON.stringify(getUser.data.password))
+    localStorage.setItem('user', JSON.stringify(getUser.data))
+    router.push('/')
+  }
+
+  // const onSubmit = useCallback(async (data) => {
+  //   try {
+  //     await axios.get('https://petstore.swagger.io/v2/user/login', {
+  //       username: data.fullName,
+  //       password: data.password
+  //     })
+  //     .then((res) => {
+  //       console.log(res.data)
+  //     })
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }) 
 
   return (
     <>

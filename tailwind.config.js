@@ -4,5 +4,10 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@headlessui/tailwindcss')({ prefix: 'ui' })
+
+    // Or with a custom prefix:
+    // require('@headlessui/tailwindcss')({ prefix: 'ui' })
+  ],
 }
