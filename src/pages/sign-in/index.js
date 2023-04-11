@@ -35,9 +35,20 @@ const Index = () => {
 
     const getUser = await axios.get(`https://petstore.swagger.io/v2/user/${data.fullName}`)
     console.log(getUser.data)
-    localStorage.setItem('token', JSON.stringify(getUser.data.password))
+    localStorage.setItem('token', JSON.stringify(getUser.data.userStatus))
     localStorage.setItem('user', JSON.stringify(getUser.data))
-    router.push('/')
+    if(getUser.data.userStatus == 1){
+      router.push('/dashboard/admindash')
+        if(getUser.data.userStatus != 1) {
+          return {
+            notFound: true,
+          }
+        }
+    }else if(getUser.data.userStatus == 2){
+      router.push('/dashboard/mitradash')
+    } else {
+      router.push('/')
+    }
   }
 
   // const onSubmit = useCallback(async (data) => {
@@ -54,7 +65,7 @@ const Index = () => {
   //   }
   // }) 
 
-  return (
+  return ( 
     <>
     <Head>
         <title>Trippy - Sign In</title>

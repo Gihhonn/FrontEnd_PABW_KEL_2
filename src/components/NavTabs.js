@@ -26,9 +26,14 @@ const Navtabs = () => {
 
     const { register,handleSubmit, formState: { errors } } = useForm({resolver: yupResolver(flightSchema, roomSchema)})
 
-    const onSubmit = (data) => {
-      console.log(data)
+    const onSubmitFlight = (data) => {
+      router.push('/search/flight')
     }
+
+    const onSubmitHotel = (data) => {
+        router.push('/search/hotel')
+      }
+
   return (
     <div className='w-full py-4 sm:px-0 mx-auto'>
         <Tab.Group>
@@ -44,7 +49,7 @@ const Navtabs = () => {
             </Tab.List>
             <Tab.Panels>
                 <Tab.Panel className='flex justify-center'>
-                    <form className='flex w-full flex-col mx-4'>
+                    <form onSubmit={onSubmitFlight} className='flex w-full flex-col mx-4'>
                         <div className='flex w-auto h-[100px] my-3 gap-8 items-center mx-auto justify-center'>
                             <div className='flex w-auto h-[100px] gap-3 relative my-[0.5rem] mx-auto items-start'>
                                 <Image
@@ -139,7 +144,7 @@ const Navtabs = () => {
                     </form>
                 </Tab.Panel>
                 <Tab.Panel>
-                <form className='flex w-full flex-col mx-4'>
+                <form onSubmit={onSubmitHotel} className='flex w-full flex-col mx-4'>
                         {/** --------- */}
                         <div className='flex w-auto h-[100px] my-3 gap-8 items-center mx-auto justify-center'>
                             <div className='flex w-auto h-[100px] gap-3 relative my-[0.5rem] mx-auto items-start'>

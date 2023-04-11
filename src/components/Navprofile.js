@@ -12,9 +12,9 @@ const Navprofile = () => {
       setDropdown(!dropdown)
     }
     const user = JSON.parse(localStorage.getItem('user'))
-    const test = () => {
-        console.log("hello")
-    }
+    // const test = () => {
+    //     console.log("hello")
+    // }
   return (
     <div className='mr-3 text-xl cursor-pointer'>
       <div onClick={handleToggle} className='inline-flex items-center bg-black bg-opacity-20 rounded-full px-2 py-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
