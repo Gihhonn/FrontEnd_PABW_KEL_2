@@ -8,7 +8,7 @@ import Notification from './Notification';
 import { MdLogout } from 'react-icons/md'
 import { Menu } from '@headlessui/react';
 
-const NavigationBar = ({ nav }) => {
+const NavigationBarBg = ({ nav }) => {
     const handleSignOut = () => {
         localStorage.clear()
         navigate.reload()
@@ -86,4 +86,4 @@ const NavigationBar = ({ nav }) => {
   )
 }
 
-export default NavigationBar
+export default NavigationBarBg

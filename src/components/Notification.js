@@ -7,7 +7,7 @@ const Notification = ( {style} ) => {
 const notifs = [
   { id: 1, title: 'Order: tf53fd203-736df33-3837f', content: 'Pembayaran telah dikonfirmasi' },
   { id: 2, title: 'Promo Tahun Baru', content: 'Diskon di Tahun Baru untuk semua pembayaran via Dana' },
-  { id: 2, title: 'Wisata Liburan Ke Bali', content: 'Ayo segera pesan tiket anda dan berlibur ke Bali' },
+  { id: 3, title: 'Wisata Liburan Ke Bali', content: 'Ayo segera pesan tiket anda dan berlibur ke Bali' },
 ]
   return (
     <Menu as='div' className='mr-3 text-xl cursor-pointer'>
@@ -29,7 +29,7 @@ const notifs = [
           <div className='px-1 py-1 cursor-pointer'>
             {notifs.map((items) => {
               return (
-                <>
+                
                  <Menu.Item key={items.id}> 
                   {({ active }) => (
                     <div className={`${active ? 'bg-blue-300 text-white' : 'text-gray-900'} group flex flex-col w-full cursor-pointer rounded-md px-2 py-2 text-sm`}>
@@ -38,7 +38,7 @@ const notifs = [
                     </div>
                   )}
             </Menu.Item>
-                </>
+                
               )
             })}
             
